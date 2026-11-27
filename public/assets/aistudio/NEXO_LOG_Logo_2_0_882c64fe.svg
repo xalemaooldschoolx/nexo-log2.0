@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+<rect width="1200" height="500" rx="30" fill="#0f1b2b"/>
+<g transform="translate(55,55)" stroke="#efb42d" stroke-width="9">
+<path d="M20 305H425" stroke-linecap="round" fill="none"/>
+<path d="M40 145L100 85L160 145V300H40Z M175 110L240 45L305 110V300H175Z M320 145L380 85L440 145V300H320Z" fill="#e5edf4"/>
+<path d="M12 260C80 385 350 390 445 245" fill="none" stroke-width="17" stroke-linecap="round"/>
+<path d="M408 220L458 237L423 280" fill="none" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="560" y="235" font-family="Arial,sans-serif" font-size="108" font-weight="800" fill="#f5f7fa">NEXO</text>
+<text x="865" y="235" font-family="Arial,sans-serif" font-size="108" font-weight="800" fill="#efb42d">LOG</text>
+<text x="1070" y="235" font-family="Arial,sans-serif" font-size="42" font-weight="700" fill="#f5f7fa">2.0</text>
+<text x="568" y="305" font-family="Arial,sans-serif" font-size="29" letter-spacing="5" fill="#b4c0cc">GESTÃO OPERACIONAL DA MOEGA</text></svg>

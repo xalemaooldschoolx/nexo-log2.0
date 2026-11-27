@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --nexo-bg-deep: #0A1421;
+    --nexo-bg-navy: #101B2A;
+    --nexo-surface: #152336;
+    --nexo-surface-elevated: #1A2B42;
+    --nexo-border: rgba(174, 184, 197, 0.16);
+    --nexo-gold: #F5B91B;
+    --nexo-white: #F4F6F8;
+    --nexo-muted: #AEB8C5;
+  }
+
+  html {
+    font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+    background-color: #0A1421;
+    color: #F4F6F8;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  .font-mono-tabular {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom thin industrial scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A1421;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22354E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #314B6E;
+}
+
+/* Smooth industrial status pulse animations (orange = attention, red = critical) */
+@keyframes nexoPulseOrange {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.28), inset 0 0 0 1px rgba(249, 115, 22, 0.45);
+    border-color: rgba(249, 115, 22, 0.65);
+  }
+  50% {
+    box-shadow: 0 0 18px 2px rgba(249, 115, 22, 0.32), inset 0 0 12px 0 rgba(249, 115, 22, 0.14);
+    border-color: rgba(251, 146, 60, 0.95);
+  }
+}
+
+@keyframes nexoPulseRed {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.35), inset 0 0 0 1px rgba(239, 68, 68, 0.55);
+    border-color: rgba(239, 68, 68, 0.72);
+  }
+  50% {
+    box-shadow: 0 0 22px 3px rgba(239, 68, 68, 0.38), inset 0 0 14px 0 rgba(239, 68, 68, 0.18);
+    border-color: rgba(248, 113, 113, 0.98);
+  }
+}
+
+@keyframes nexoBeaconRing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.78;
+  }
+  70% {
+    transform: scale(2.15);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.15);
+    opacity: 0;
+  }
+}
+
+.nexo-silo-pulse-orange {
+  animation: nexoPulseOrange 2.6s ease-in-out infinite;
+}
+
+.nexo-silo-pulse-red {
+  animation: nexoPulseRed 2.1s ease-in-out infinite;
+}
+
+.nexo-row-pulse-orange {
+  animation: nexoPulseOrange 2.8s ease-in-out infinite;
+}
+
+.nexo-row-pulse-red {
+  animation: nexoPulseRed 2.2s ease-in-out infinite;
+}
+
+.nexo-beacon-ring-orange {
+  animation: nexoBeaconRing 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.nexo-beacon-ring-red {
+  animation: nexoBeaconRing 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nexo-silo-pulse-orange,
+  .nexo-silo-pulse-red,
+  .nexo-row-pulse-orange,
+  .nexo-row-pulse-red,
+  .nexo-beacon-ring-orange,
+  .nexo-beacon-ring-red {
+    animation: none;
+  }
+}
+

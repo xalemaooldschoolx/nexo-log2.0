@@ -1,0 +1,1323 @@
+# NEXO LOG 2.0 — PROMPT MESTRE DE DESENVOLVIMENTO
+## GESTÃO INTELIGENTE DA MOEGA
+
+**INSTRUÇÃO PRINCIPAL AO GOOGLE AI STUDIO**
+
+Atue como uma equipe sênior multidisciplinar formada por:
+
+- Arquiteto de software.
+- Engenheiro full-stack.
+- Especialista em banco de dados e sistemas transacionais.
+- Engenheiro de segurança da informação.
+- Especialista em UX/UI para ambientes industriais.
+- Engenheiro de automação e logística.
+- Especialista em inteligência artificial multimodal.
+- Analista de processos industriais e gestão de estoque.
+
+Sua missão é projetar, desenvolver, testar e evoluir o **NEXO LOG 2.0**, uma plataforma operacional real para controle de recebimento, estoque, movimentações, transferências, programação de produção e abastecimento de matérias-primas.
+
+Não crie uma apresentação, landing page, protótipo estático ou demonstração visual.
+
+Crie um sistema de software funcional, com banco de dados persistente, autenticação, controle de permissões, operações registradas, inteligência artificial integrada, auditoria e interface adaptada a tablets robustos.
+
+O projeto deverá ser construído por etapas, mantendo uma arquitetura consistente e sem destruir funcionalidades já implementadas.
+
+---
+
+# 1. IDENTIDADE DO PRODUTO
+
+**Nome:** NEXO LOG 2.0  
+**Assinatura:** GESTÃO INTELIGENTE DA MOEGA  
+**Conceito:** Mais informação, antecipação e controle.
+
+O NEXO LOG será uma plataforma independente para gestão logística e operacional de matérias-primas.
+
+Seu primeiro ambiente será a Moega, com possibilidade de expansão futura.
+
+O sistema deverá centralizar:
+
+- Recebimentos.
+- Controle de matérias-primas.
+- Lotes e fornecedores.
+- Estoque por silo.
+- Transferências entre silos.
+- Armazenagem.
+- Programação da produção.
+- Consumo previsto e realizado.
+- Abastecimento das linhas.
+- Conferência de veículos.
+- Controle de bags.
+- Amostragem e informações de Qualidade.
+- Relatórios de turno.
+- Alertas operacionais.
+- Histórico e auditoria.
+
+O sistema será inicialmente utilizado por uma equipe de até 10 usuários simultâneos, mas deverá possuir arquitetura preparada para expansão.
+
+Não utilizar a identidade visual oficial da Cargill como identidade proprietária do produto. O NEXO LOG possui marca própria. O uso de informações, documentos e sistemas internos depende de autorização da empresa.
+
+# 2. OBJETIVO OPERACIONAL
+
+O sistema precisa responder continuamente às seguintes perguntas:
+
+1. Quanto temos de cada matéria-prima?
+2. Em quais silos ela está armazenada?
+3. Qual é a capacidade de cada silo?
+4. Quanto cada linha de produção vai consumir?
+5. Qual é o consumo previsto para hoje e amanhã?
+6. O estoque disponível será suficiente?
+7. Quando será necessário receber ou transferir material?
+8. Quais silos podem receber determinada matéria-prima?
+9. Quais transferências são permitidas?
+10. Existe risco de falta de material?
+11. A produção está adiantada ou atrasada em relação à programação?
+12. Qual é a próxima necessidade de abastecimento?
+
+O sistema deverá confrontar constantemente estoque confirmado, consumo previsto, consumo realizado, capacidade dos silos, recebimentos previstos e transferências pendentes.
+
+Não deverá esperar o operador consultar manualmente cada tela para identificar uma possível falta.
+
+# 3. ARQUITETURA E TECNOLOGIAS
+
+Desenvolva preferencialmente com:
+
+**Frontend**
+- React.
+- TypeScript.
+- Interface responsiva.
+- PWA instalável.
+- Layout otimizado para Android.
+- Compatibilidade com navegadores modernos.
+
+**Backend**
+- Node.js.
+- TypeScript.
+- API segura.
+- Validações no servidor.
+- Processamento de operações transacionais.
+
+**Banco de dados**
+- PostgreSQL, preferencialmente Supabase.
+- Relacionamentos consistentes.
+- Transações atômicas.
+- Índices apropriados.
+- Controle de integridade.
+- Histórico de alterações.
+
+**Autenticação**
+- Login individual.
+- Senhas protegidas.
+- Controle de sessão.
+- Perfis e permissões.
+- Preparação para integração futura com identidade corporativa.
+
+**Armazenamento**
+- Fotografias de etiquetas.
+- Fotografias de fichas.
+- PDFs.
+- Relatórios.
+- Documentos de recebimento.
+- Comprovantes.
+- Arquivos de programação.
+
+**Inteligência artificial**
+- Google Gemini API.
+- Modelos multimodais para análise de fotografias e PDFs.
+- OCR e extração estruturada.
+- Function calling para consultar dados e executar funções autorizadas.
+- Respostas estruturadas em JSON.
+- Validação dos resultados antes de gravar informações.
+
+Não coloque chaves de API no frontend. Utilize variáveis de ambiente e secrets no servidor.
+
+Não mantenha duas bases de dados concorrentes. Se houver necessidade de avaliar Firebase ou outro serviço, explique a vantagem, o custo e o impacto antes de alterar a arquitetura principal.
+
+A arquitetura deverá permitir desenvolvimento, homologação e produção separados.
+
+# 4. IDENTIDADE VISUAL E DESIGN
+
+Reproduza a identidade visual das imagens de referência fornecidas.
+
+Não invente outra marca, outro logotipo ou outro conceito visual.
+
+**Paleta principal:**
+
+- Azul-marinho escuro: #101B2A.
+- Azul profundo: #0A1421.
+- Amarelo/dourado: #F5B91B.
+- Branco: #F4F6F8.
+- Cinza de apoio: #AEB8C5.
+
+**Cores operacionais:**
+
+- Azul: silos de linha e operação da Moega.
+- Verde: armazenagem e estados confirmados, quando aplicável.
+- Laranja: grupo operacional de Produção/abastecimento.
+- Vermelho: divergência, bloqueio, risco ou alerta crítico.
+- Amarelo: atenção e necessidade de ação.
+
+Não usar cores apenas como decoração. Todas devem ter significado operacional consistente.
+
+**Logotipo:**
+
+Utilizar o logotipo NEXO LOG 2.0 fornecido como referência:
+- Símbolo de três silos estilizados.
+- Arco amarelo na base.
+- NEXO em branco.
+- LOG em amarelo.
+- 2.0 em branco.
+- Assinatura GESTÃO INTELIGENTE DA MOEGA.
+
+Preservar proporções, identidade e legibilidade.
+
+**Estilo da interface:**
+
+- Industrial corporativo.
+- Profissional.
+- Alto contraste.
+- Painéis organizados.
+- Ícones lineares.
+- Bordas discretamente arredondadas.
+- Botões grandes.
+- Tipografia legível.
+- Informações importantes em destaque.
+- Gráficos limpos.
+- Pouca poluição visual.
+
+A interface deverá parecer um software industrial de verdade, não um painel genérico de administração.
+
+# 5. INTERFACE E NAVEGAÇÃO
+
+Criar uma barra superior com identidade NEXO LOG, identificação do usuário, turno, data, notificações e acesso ao guia.
+
+Criar navegação principal com:
+
+1. Painel.
+2. Mapa de Silos.
+3. Estoque.
+4. Recebimentos.
+5. Leitura de Etiquetas.
+6. Transferências.
+7. Programação.
+8. Consumo.
+9. Abastecimento.
+10. Qualidade.
+11. Relatórios.
+12. Histórico/Auditoria.
+13. Administração.
+14. Guia de Operação.
+
+A navegação deverá ser adaptável ao tablet e ao computador.
+
+No tablet, priorizar botões grandes, formulários curtos, leitura rápida e operação com uma mão quando possível.
+
+No computador, oferecer tabelas completas, filtros, relatórios e ferramentas administrativas.
+
+# 6. PAINEL PRINCIPAL
+
+Criar um dashboard operacional com:
+
+- Estoque total confirmado.
+- Quantidade de silos ocupados.
+- Silos disponíveis.
+- Silos próximos da capacidade.
+- Recebimentos em andamento.
+- Recebimentos pendentes.
+- Transferências em andamento.
+- Solicitações de Produção.
+- Alertas de estoque.
+- Consumo previsto para hoje.
+- Consumo previsto para amanhã.
+- Necessidades de abastecimento.
+- Última atualização.
+- Operadores ativos.
+
+Exibir indicadores por linha e por matéria-prima.
+
+Criar uma área de alertas inteligentes, com prioridade:
+
+- Crítico.
+- Alto.
+- Atenção.
+- Informativo.
+
+Exemplos:
+
+"ALERTA: Silo 12 apresenta estoque insuficiente para a programação projetada da Linha 4."
+
+"RECOMENDAÇÃO: avaliar transferência de matéria-prima compatível a partir do Silo 38."
+
+"PROGRAMAÇÃO ATUALIZADA: o consumo previsto para amanhã foi importado e recalculado."
+
+Não inventar números. Todos os indicadores deverão ser calculados a partir de dados reais cadastrados.
+
+# 7. MAPA VISUAL DOS SILOS
+
+Este é um dos módulos mais importantes.
+
+Utilizar a imagem do mapa de silos fornecida como referência visual obrigatória.
+
+Não redesenhar a disposição por conta própria. Não alterar a posição dos silos, a organização das linhas ou a identificação visual sem autorização.
+
+Transformar o desenho em um mapa interativo, com elementos clicáveis.
+
+Cada silo deverá exibir:
+
+- Número.
+- Categoria.
+- Linha vinculada.
+- Matéria-prima.
+- Código do produto.
+- Lote atual.
+- Capacidade máxima.
+- Estoque confirmado.
+- Ocupação percentual.
+- Espaço disponível.
+- Última movimentação.
+- Estado operacional.
+- Compatibilidade para recebimento.
+- Compatibilidade para transferência.
+- Histórico.
+
+Ao clicar em um silo, abrir um painel detalhado.
+
+Permitir filtros por matéria-prima, linha, categoria, situação e nível de ocupação.
+
+**Ordem visual de referência da rubricagem:**
+
+Preservar esta sequência, sem ordenar numericamente:
+
+9, 10, 11, 12, 13, 14, 15, 16, 31, 32, 33, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29, 42, 41, 40, 39, 38, 37, 36, 35, 34.
+
+Após essa sequência, apresentar o grupo de Produção/abastecimento:
+
+43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64.
+
+Essa sequência é uma referência operacional a ser cadastrada e validada com a documentação oficial.
+
+Não inventar os silos 27 e 30 nem suas posições.
+
+A associação definitiva de cada silo à linha, matéria-prima, capacidade e categoria deverá ser administrável e possuir histórico.
+
+A imagem original do mapa deve permanecer disponível como referência de conferência.
+
+# 8. CADASTRO DE SILOS E COMPATIBILIDADE
+
+Criar cadastro individual de silos.
+
+Cada cadastro terá:
+
+- Número.
+- Categoria.
+- Linha.
+- Capacidade.
+- Matéria-prima permitida.
+- Códigos compatíveis.
+- Estado operacional.
+- Situação de limpeza.
+- Restrições.
+- Histórico.
+
+Criar uma tabela de compatibilidade entre:
+
+- Matéria-prima.
+- Código.
+- Silo de origem.
+- Silo de destino.
+- Tipo de operação.
+- Restrições.
+- Necessidade de autorização.
+
+Nunca presumir que dois silos são compatíveis apenas porque armazenam produtos parecidos.
+
+A transferência somente poderá ser sugerida quando a regra de compatibilidade estiver cadastrada e validada.
+
+# 9. RECEBIMENTO INTELIGENTE
+
+Desenvolver um fluxo completo de recebimento.
+
+O operador deverá conseguir iniciar um recebimento pelo tablet.
+
+Campos:
+
+- Data e hora.
+- Turno.
+- Operador.
+- Motorista.
+- Placa do veículo.
+- Transportadora.
+- Fornecedor.
+- Nota fiscal.
+- Matéria-prima.
+- Código.
+- Lote do fornecedor.
+- Lote interno, quando disponível.
+- Peso informado.
+- Peso confirmado.
+- Tipo de recebimento.
+- Quantidade de bags, quando aplicável.
+- Silo de destino.
+- Observações.
+- Documentos e fotografias.
+
+O recebimento deverá permitir uma carga distribuída em vários silos.
+
+Exemplo:
+
+Carga de 38.840 kg.
+
+- Silo 12: 20.000 kg.
+- Silo 21: 18.840 kg.
+
+O sistema deverá registrar duas destinações vinculadas ao mesmo recebimento, lote e documento.
+
+Não considerar o estoque atualizado até a confirmação autorizada.
+
+O operador poderá registrar uma descarga parcial e continuar depois.
+
+Ao adicionar uma segunda descarga do mesmo lote ao mesmo silo, apresentar aviso:
+
+"Este lote já possui uma movimentação registrada neste silo. Deseja adicionar uma nova quantidade?"
+
+Mostrar:
+
+- Quantidade anterior.
+- Quantidade desta operação.
+- Quantidade acumulada.
+- Saldo ainda não descarregado, quando conhecido.
+
+Não bloquear operações legítimas, mas impedir duplicações acidentais.
+
+# 10. LEITURA DE ETIQUETAS E CÓDIGOS DE BARRAS
+
+Criar um módulo de leitura pelo tablet.
+
+A leitura deverá funcionar preferencialmente pela câmera e também aceitar leitores externos que funcionem como teclado, quando disponíveis.
+
+A etiqueta deverá ser analisada para identificar:
+
+- Código de barras.
+- Lote.
+- Matéria-prima.
+- Código do produto.
+- Fornecedor.
+- Data de entrada, quando presente.
+- Quantidade, quando presente.
+- Peso unitário, quando presente.
+
+A extração deverá utilizar:
+
+1. Leitura real do código de barras.
+2. OCR da parte textual da etiqueta.
+3. Consulta ao cadastro interno.
+4. Comparação dos dados encontrados.
+5. Apresentação para confirmação do operador.
+
+Não depender apenas de interpretação visual do Gemini para ler códigos de barras.
+
+Utilizar biblioteca própria de leitura de códigos, como ZXing ou equivalente, quando compatível.
+
+**Exemplo de referência real fornecida:**
+
+Etiqueta de matéria-prima:
+
+- Lote: 0011647908.
+- Matéria-prima: CALCARIO.
+- Fornecedor: MOAGEM PINHEIRO & ALVARENGA LTDA.
+- Data de entrada: 16/11/2026.
+- Quantidade: 38.840 kg.
+- Código do produto: 2017101021, identificado na tela do Sensor Sistemas.
+
+O exemplo serve como referência de funcionamento, não como cadastro permanente de estoque.
+
+O sistema deverá reconhecer uma nova leitura do mesmo lote e consultar o histórico antes de permitir outra movimentação.
+
+# 11. CONTROLE DE BAGS
+
+Criar uma funcionalidade específica para recebimento de bags.
+
+O operador poderá:
+
+- Ler uma etiqueta.
+- Identificar a matéria-prima.
+- Informar a quantidade de bags.
+- Conferir o peso unitário.
+- Calcular o peso total.
+- Distribuir o peso entre silos.
+
+Exemplo:
+
+10 bags de 1.200 kg = 12.000 kg = 12 toneladas.
+
+Fórmula:
+
+Peso total = quantidade de bags × peso unitário.
+
+Permitir pesos unitários diferentes por produto, fornecedor ou lote, quando a etiqueta ou documentação confirmar essa diferença.
+
+**Referências preliminares anotadas na operação:**
+
+- Calcário: 1.200 kg por bag em uma referência.
+- Fosfato mono e bi: 1.500 kg em uma referência.
+- Alga: 1.000 kg ou 1.300 kg, conforme referência.
+- Veículo: 800 kg em uma referência.
+- Glúten: 1.000 kg ou 1.260 kg, conforme referência.
+- Calcítico: 1.000 kg em uma referência.
+- Calcário: 1.000 kg em outra referência.
+
+Esses valores são referências pendentes de validação. Não fixar pesos unitários sem confirmação do documento ou operador.
+
+A quantidade de bags e o peso calculado deverão ser armazenados separadamente.
+
+# 12. DOCUMENTOS FÍSICOS E INTELIGÊNCIA ARTIFICIAL
+
+Criar um módulo chamado DOCUMENTOS INTELIGENTES.
+
+O operador poderá fotografar documentos diretamente pelo tablet ou enviar PDFs.
+
+A IA deverá reconhecer documentos como:
+
+- Programação diária de produção.
+- Relatório de consumo.
+- Etiquetas de lotes.
+- Ficha de avaliação de veículo.
+- Ficha de contagem.
+- Comprovantes de pesagem.
+- Relatórios de recebimento.
+- Documentos de Qualidade.
+- Outros formulários operacionais.
+
+Utilizar Gemini multimodal para interpretação de imagens e PDFs.
+
+O fluxo deverá ser:
+
+1. Capturar imagem ou PDF.
+2. Identificar o tipo de documento.
+3. Extrair os campos.
+4. Gerar estrutura JSON.
+5. Mostrar prévia ao operador.
+6. Sinalizar informações ilegíveis.
+7. Comparar com cadastros existentes.
+8. Solicitar confirmação humana.
+9. Gravar os dados autorizados.
+10. Manter o documento original vinculado ao registro.
+
+A IA nunca deverá completar automaticamente campos que não conseguiu ler.
+
+Se não identificar um campo, registrar como "não identificado".
+
+Se houver divergência, apresentar alerta.
+
+Guardar a imagem original, o resultado extraído, a versão corrigida e o responsável pela confirmação.
+
+Não substituir um documento original por uma transcrição.
+
+# 13. FICHA RQ-REC-042 — AVALIAÇÃO DO VEÍCULO E CONTROLE DE DESCARGA
+
+Criar formulário digital correspondente à ficha física RQ-REC-042.
+
+A ficha física deverá continuar sendo utilizada conforme o procedimento da operação.
+
+O sistema deverá permitir o registro digital dos seguintes itens:
+
+**Avaliação do veículo**
+
+- Produto carregado anteriormente.
+- Condições de paletes e lonas.
+- Umidade.
+- Odores estranhos.
+- Presença de pragas.
+- Resíduos ou materiais estranhos.
+- Vazamento de óleo.
+- Buracos ou lascas na carroceria.
+- Possíveis contaminantes químicos ou outros materiais.
+- Condições das bicas de escoamento.
+- Condições de lacres, quando aplicável.
+- Segurança da operação.
+- Observações adicionais.
+
+Cada item deverá aceitar:
+
+- Conforme (C).
+- Não conforme (NC).
+- Não se aplica (NA).
+- Observação.
+
+**Controle de descarga**
+
+- Data.
+- Responsável pela descarga.
+- Motorista.
+- Transportadora.
+- Nota fiscal.
+- Fornecedor.
+- Matéria-prima.
+- Matéria-prima crítica.
+- Concentração, quando aplicável.
+- Horário inicial.
+- Horário final.
+- Responsável pela conferência.
+- Informações de Qualidade.
+
+**Ficha de contagem**
+
+- Código.
+- Descrição.
+- Lote fornecedor.
+- Lote interno.
+- Peso da embalagem.
+- Quantidade de paletes.
+- Peso total.
+- Data de fabricação.
+- Validade.
+
+A IA deverá comparar a ficha, a etiqueta e a pesagem.
+
+Se encontrar divergência, não aprovar automaticamente.
+
+# 14. INFORMAÇÕES DO SENSOR SISTEMAS
+
+O ambiente de Produção utiliza o sistema Sensor Sistemas.
+
+Não presumir que exista API, acesso ao banco de dados ou autorização para integração.
+
+Criar um módulo de importação de informações externas com as seguintes opções:
+
+- Fotografia de tela.
+- PDF.
+- Relatório impresso fotografado.
+- CSV.
+- XLSX.
+- Arquivo estruturado, caso futuramente disponibilizado.
+
+A primeira forma de integração será por relatórios gerados e disponibilizados pela equipe responsável.
+
+O sistema deverá interpretar os relatórios e reconhecer:
+
+- Data da programação.
+- Linha de produção.
+- Ordem ou sequência de produção.
+- Matéria-prima.
+- Código.
+- Consumo.
+- Situação da ordem.
+- Data e hora de atualização, quando disponíveis.
+
+**Objetivo futuro:**
+
+Quando a Produção atualizar a programação e disponibilizar um novo relatório, o NEXO LOG deverá identificar:
+
+- Qual programação é atual.
+- Qual programação é futura.
+- Qual ordem está em execução.
+- Se a produção está adiantada ou atrasada, quando houver evidência.
+- Qual consumo já foi realizado.
+- Qual consumo ainda está previsto.
+- Qual será a próxima necessidade de matéria-prima.
+
+Não inferir que uma ordem foi concluída apenas porque um relatório novo foi recebido.
+
+A mudança de programação deverá ser registrada como uma nova revisão, sem apagar o histórico anterior.
+
+# 15. PROGRAMAÇÃO DA PRODUÇÃO
+
+Criar módulo para linhas de produção 01 a 07.
+
+Permitir:
+
+- Importação de PDF.
+- Importação de fotografia.
+- Importação de planilha.
+- Cadastro manual.
+- Histórico de versões.
+- Comparação entre versões.
+- Consumo por linha.
+- Consumo por matéria-prima.
+- Programação de hoje.
+- Programação de amanhã.
+- Planejamento futuro.
+
+Separar claramente:
+
+**Consumo previsto:** quantidade calculada com base na programação.
+
+**Consumo realizado:** quantidade efetivamente consumida e registrada.
+
+**Consumo estimado:** previsão baseada em dados incompletos ou hipóteses identificadas.
+
+Não misturar esses valores.
+
+Uma revisão da programação deverá recalcular projeções, mas nunca alterar retroativamente o estoque real.
+
+# 16. INTELIGÊNCIA DE ESTOQUE E RUBRICAGEM
+
+Este módulo deverá ser o centro da inteligência operacional.
+
+O sistema deverá calcular continuamente:
+
+Estoque atual confirmado = saldo inicial + entradas confirmadas - saídas confirmadas + ajustes autorizados.
+
+Transferências deverão debitar a origem e creditar o destino na mesma transação.
+
+A transferência não poderá gerar estoque adicional fictício.
+
+A projeção deverá considerar:
+
+- Estoque confirmado.
+- Consumo previsto.
+- Consumo realizado.
+- Recebimentos confirmados.
+- Recebimentos previstos, separados do estoque disponível.
+- Transferências pendentes.
+- Capacidade dos silos.
+- Compatibilidade.
+- Margem de segurança configurada.
+
+Criar previsão por matéria-prima, silo e linha.
+
+**Exemplo de alerta:**
+
+"A Linha 4 possui consumo previsto de X toneladas. O estoque confirmado disponível nos silos compatíveis é de Y toneladas. Existe uma diferença projetada de Z toneladas."
+
+Os valores X, Y e Z deverão ser calculados pelo sistema.
+
+Nunca utilizar números ilustrativos como se fossem dados reais.
+
+# 17. RECOMENDAÇÕES AUTOMÁTICAS DE TRANSFERÊNCIA
+
+Criar mecanismo de recomendação de transferência.
+
+Exemplo operacional:
+
+Silo 38 está com estoque elevado de determinada matéria-prima.
+
+Silo 12 está com estoque abaixo da necessidade projetada da Linha 4.
+
+O sistema verifica:
+
+- Compatibilidade da matéria-prima.
+- Regras de transferência.
+- Capacidade disponível.
+- Quantidade necessária.
+- Estoque da origem.
+- Consumo previsto.
+- Restrições operacionais.
+
+Se tudo estiver válido, apresenta um pop-up:
+
+**NECESSIDADE DE ABASTECIMENTO IDENTIFICADA**
+
+"Foi identificada uma necessidade de reposição no Silo 12."
+
+Ações sugeridas:
+
+- Avaliar transferência do Silo 38.
+- Receber nova matéria-prima.
+- Registrar abastecimento manual.
+- Adiar e justificar.
+
+A IA poderá recomendar, mas a movimentação deverá depender de confirmação humana autorizada.
+
+# 18. MATRIZ DE TRANSFERÊNCIAS
+
+Cadastrar as regras de transferência informadas pela operação.
+
+Referência já confirmada pelo operador:
+
+- Silo 37: origem de material identificado como Veículo Premix.
+- Destinos informados: Silo 10 e Silo 15.
+
+Outras referências anotadas deverão ser cadastradas como pendentes de validação antes de serem liberadas para uso.
+
+A matriz deverá permitir:
+
+- Origem.
+- Destino.
+- Matéria-prima.
+- Código.
+- Quantidade máxima.
+- Restrições.
+- Autorização.
+- Histórico.
+- Situação ativa/inativa.
+
+Não criar uma regra de transferência com base apenas em uma anotação ilegível.
+
+# 19. CONSUMO, ESTOQUE E ANTECIPAÇÃO
+
+Criar uma tela de visão integrada.
+
+Exibir, para cada linha:
+
+- Matéria-prima.
+- Silo atual.
+- Estoque confirmado.
+- Consumo realizado.
+- Consumo previsto.
+- Saldo projetado.
+- Próxima necessidade.
+- Situação.
+
+A previsão deverá ser recalculada sempre que:
+
+- Entrar um novo recebimento confirmado.
+- Ocorrer uma transferência.
+- Houver baixa de consumo.
+- Uma programação for atualizada.
+- Um recebimento previsto for confirmado ou cancelado.
+- Uma correção autorizada for realizada.
+
+Criar alertas antecipados, com horizonte configurável.
+
+A IA deverá explicar o motivo de cada alerta e apontar quais informações foram utilizadas.
+
+# 20. PRODUÇÃO — VISÃO DE CONSULTA
+
+Criar um perfil de acesso para Produção.
+
+A Produção poderá:
+
+- Consultar estoque disponível.
+- Consultar silos.
+- Consultar disponibilidade por linha.
+- Consultar alertas.
+- Enviar solicitações de materiais.
+- Consultar o andamento de solicitações.
+
+A Produção não poderá:
+
+- Alterar estoque.
+- Confirmar recebimentos.
+- Realizar transferências.
+- Alterar cadastro de produtos.
+- Modificar capacidade dos silos.
+- Alterar registros operacionais da Moega.
+
+A Produção deverá ter uma interface simplificada e de consulta, com acesso controlado.
+
+# 21. SOLICITAÇÃO DE MATERIAL
+
+Criar módulo de solicitação.
+
+Campos:
+
+- Linha.
+- Matéria-prima.
+- Quantidade solicitada.
+- Urgência.
+- Justificativa.
+- Data e hora.
+- Solicitante.
+
+Estados:
+
+- Solicitado.
+- Recebido pela Moega.
+- Em análise.
+- Aprovado.
+- Em atendimento.
+- Atendido.
+- Cancelado.
+
+Uma solicitação não deverá baixar estoque automaticamente.
+
+# 22. QUALIDADE E AMOSTRAGEM
+
+Criar módulo de registro de amostras.
+
+Campos:
+
+- Lote.
+- Matéria-prima.
+- Fornecedor.
+- Recebimento relacionado.
+- Data e hora.
+- Responsável pela coleta.
+- Situação da amostra.
+- Observações.
+- Documento associado.
+
+Estados possíveis:
+
+- Pendente.
+- Coletada.
+- Em análise.
+- Aprovada.
+- Reprovada.
+- Bloqueada.
+
+Não liberar material bloqueado por Qualidade sem autorização formal de usuário habilitado.
+
+# 23. TURNOS E PASSAGEM DE SERVIÇO
+
+O sistema deverá trabalhar com três turnos.
+
+Cada operação terá:
+
+- Data operacional.
+- Turno.
+- Operador.
+- Data e hora reais.
+- Registro de início e fim.
+- Pendências.
+- Observações.
+
+A operação do segundo turno começa às 17h e termina após a meia-noite.
+
+Para os relatórios do segundo turno, preservar a data operacional correspondente ao início do turno, mesmo quando o relógio já indicar o dia seguinte.
+
+Criar passagem de turno com:
+
+- Estoque crítico.
+- Recebimentos pendentes.
+- Descargas em andamento.
+- Transferências pendentes.
+- Problemas operacionais.
+- Necessidades de abastecimento.
+- Observações.
+
+Não atribuir culpa a turnos anteriores. O relatório deve apresentar fatos, horários e ocorrências de maneira profissional.
+
+# 24. RELATÓRIOS
+
+Criar relatórios com filtros por:
+
+- Data.
+- Turno.
+- Operador.
+- Matéria-prima.
+- Fornecedor.
+- Lote.
+- Silo.
+- Linha.
+- Tipo de movimentação.
+
+Relatórios:
+
+- Recebimentos.
+- Estoque.
+- Movimentações.
+- Transferências.
+- Consumo.
+- Programação.
+- Necessidades de abastecimento.
+- Qualidade.
+- Auditoria.
+- Passagem de turno.
+
+Permitir exportação em PDF, XLSX e CSV.
+
+O relatório operacional deverá ser profissional, cronológico, conciso e rastreável.
+
+# 25. GUIA DE OPERAÇÃO — MANUAL INTERATIVO
+
+Criar uma área permanente chamada:
+
+**GUIA NEXO LOG — MANUAL DE OPERAÇÃO**
+
+O guia deverá estar disponível em todas as telas por um ícone de ajuda.
+
+Criar:
+
+- Manual geral.
+- Tutorial por módulo.
+- Passo a passo ilustrado.
+- Exemplos de operação.
+- Perguntas frequentes.
+- Busca por palavras.
+- Avisos de segurança.
+- Explicação dos estados e cores.
+- Procedimentos para corrigir erros.
+- Orientações para recebimento e transferência.
+
+Cada módulo deverá possuir um botão "Como utilizar esta ferramenta?".
+
+Ao clicar, abrir uma explicação contextual daquela tela.
+
+O guia deverá ser pesquisável e permitir atualização por administradores.
+
+A IA poderá responder perguntas com base exclusivamente na documentação aprovada do NEXO LOG, indicando quando não encontrar uma resposta.
+
+# 26. ASSISTENTE INTELIGENTE NEXO
+
+Criar um assistente interno chamado:
+
+**NEXO INTELIGÊNCIA OPERACIONAL**
+
+O assistente deverá compreender consultas como:
+
+- Quanto temos de calcário?
+- Quais silos estão abaixo do nível necessário?
+- O que a Linha 4 vai consumir amanhã?
+- Qual será a próxima matéria-prima necessária?
+- Existe risco de falta de fosfato?
+- Qual silo pode receber esse material?
+- Quais recebimentos estão pendentes?
+- Qual lote foi recebido hoje?
+- Qual a quantidade já descarregada desse lote?
+- O que precisa ser passado para o próximo turno?
+
+A IA deverá consultar os dados reais por ferramentas autorizadas do backend.
+
+Não inventar respostas.
+
+Não responder com números sem identificar a fonte e o momento da consulta.
+
+Deverá explicar quando os dados estiverem incompletos ou desatualizados.
+
+A IA poderá gerar recomendações, alertas, comparações e previsões.
+
+Não poderá executar operações críticas sem autorização e confirmação.
+
+# 27. AUTOMAÇÃO E REGRAS DE DECISÃO
+
+Criar um motor de regras separado do modelo de linguagem.
+
+As regras matemáticas e operacionais deverão ser determinísticas e testáveis.
+
+A IA deverá interpretar contexto e explicar resultados, mas os cálculos de estoque, capacidade, consumo e transferência deverão ser executados por código validado.
+
+Criar rotinas de verificação para:
+
+- Estoque abaixo do mínimo.
+- Capacidade excedida.
+- Consumo superior ao estoque.
+- Lote duplicado.
+- Recebimento parcial.
+- Transferência incompleta.
+- Programação atualizada.
+- Divergência entre documentos.
+- Validade próxima.
+- Silo incompatível.
+- Material bloqueado.
+
+Registrar a origem de cada alerta.
+
+# 28. SEGURANÇA, PERMISSÕES E AUDITORIA
+
+Criar perfis:
+
+**Administrador**
+- Gerenciar usuários.
+- Configurar cadastros.
+- Configurar regras.
+- Autorizar ajustes.
+- Consultar auditoria.
+
+**Supervisor**
+- Acompanhar operações.
+- Autorizar movimentações conforme permissão.
+- Validar divergências.
+- Consultar relatórios.
+
+**Operador Moega**
+- Registrar recebimentos.
+- Registrar transferências autorizadas.
+- Realizar conferências.
+- Consultar estoque.
+- Registrar ocorrências.
+
+**Produção**
+- Consultar dados autorizados.
+- Solicitar materiais.
+
+Cada usuário terá conta individual.
+
+Toda operação deverá registrar:
+
+- Usuário.
+- Data e hora.
+- Ação.
+- Registro afetado.
+- Valor anterior.
+- Valor novo.
+- Motivo, quando aplicável.
+- Origem da operação.
+
+Não permitir edição silenciosa do histórico.
+
+Correções deverão gerar registros de reversão ou ajuste autorizado.
+
+Implementar controle de acesso no servidor e no banco de dados. Não confiar apenas em esconder botões na interface.
+
+# 29. INTEGRIDADE DO ESTOQUE
+
+O estoque nunca poderá ser alterado por simples edição de um campo.
+
+Toda alteração deverá ter origem em uma movimentação válida.
+
+Tipos de movimento:
+
+- Entrada.
+- Saída.
+- Transferência.
+- Ajuste autorizado.
+- Reversão.
+
+As transferências deverão ser atômicas.
+
+Não permitir saldo negativo, exceto se existir uma regra formal e autorização expressa.
+
+Não permitir ultrapassar capacidade do silo.
+
+Não contar recebimentos previstos como estoque disponível.
+
+Não contar solicitações de Produção como consumo realizado.
+
+Não duplicar uma entrada quando o mesmo documento for importado duas vezes.
+
+Criar identificadores únicos e mecanismos de idempotência.
+
+# 30. ESTRUTURA DE DADOS
+
+Criar banco de dados normalizado com, no mínimo, as entidades:
+
+- users
+- roles
+- permissions
+- materials
+- suppliers
+- vehicles
+- silos
+- silo_material_compatibility
+- silo_transfer_rules
+- shifts
+- receipts
+- receipt_allocations
+- receipt_documents
+- barcode_scans
+- bags
+- inventory_movements
+- inventory_balances
+- production_lines
+- production_plan_revisions
+- production_plan_items
+- production_consumption
+- material_requests
+- quality_samples
+- vehicle_inspections
+- unloading_checklists
+- document_extractions
+- operational_alerts
+- shift_handover
+- audit_events
+- help_articles
+- system_settings
+
+Criar relacionamentos, restrições, índices e políticas de acesso.
+
+Não duplicar informação sem necessidade.
+
+Manter o estoque calculável a partir do livro de movimentações.
+
+# 31. FUNCIONAMENTO SEM INTERNET E SINCRONIZAÇÃO
+
+Avaliar e implementar uma estratégia de operação offline limitada para o tablet.
+
+Permitir, quando tecnicamente seguro:
+
+- Abrir telas já carregadas.
+- Registrar rascunhos.
+- Fotografar documentos.
+- Guardar operações pendentes localmente.
+- Sincronizar quando a conexão retornar.
+
+Operações pendentes não deverão aparecer como estoque confirmado.
+
+Exibir claramente:
+
+- Sincronizado.
+- Pendente de sincronização.
+- Falha de sincronização.
+- Necessita conferência.
+
+Resolver conflitos por regras explícitas. Nunca sobrescrever silenciosamente uma movimentação.
+
+# 32. DESEMPENHO E TABLET ROBUSTO
+
+Priorizar operação em tablet Android robusto.
+
+Interface:
+
+- Responsiva.
+- Botões grandes.
+- Campos adequados ao toque.
+- Pouca digitação.
+- Câmera acessível.
+- Leitura de código rápida.
+- Mapa com zoom.
+- Tabelas adaptadas.
+- Boa legibilidade em ambiente industrial.
+
+Evitar telas pesadas e animações desnecessárias.
+
+O sistema deverá ser testado em diferentes resoluções.
+
+A câmera deverá solicitar permissão corretamente e possuir alternativa de upload de imagem.
+
+# 33. TESTES OBRIGATÓRIOS
+
+Criar testes automatizados para:
+
+- Entrada de material.
+- Recebimento parcial.
+- Distribuição em vários silos.
+- Leitura repetida de lote.
+- Transferência entre silos.
+- Reversão de transferência.
+- Cálculo de estoque.
+- Capacidade máxima.
+- Consumo previsto.
+- Consumo realizado.
+- Alteração de programação.
+- Permissões.
+- Auditoria.
+- Importação de documentos.
+- Sincronização offline.
+
+Criar dados fictícios de homologação, claramente separados dos dados reais.
+
+Não utilizar dados fictícios como estoque operacional.
+
+Criar testes de concorrência para impedir que dois operadores movimentem simultaneamente o mesmo saldo de forma inconsistente.
+
+# 34. CRITÉRIOS DE CONCLUSÃO
+
+O NEXO LOG somente poderá ser considerado pronto para operação real quando:
+
+- O banco de dados estiver persistente.
+- A autenticação estiver funcionando.
+- As permissões estiverem testadas.
+- O estoque estiver sendo calculado corretamente.
+- As transferências forem transacionais.
+- A auditoria estiver ativa.
+- Os documentos forem armazenados.
+- A leitura de etiquetas tiver sido testada.
+- A importação de programação estiver validada.
+- Os alertas forem calculados com dados reais.
+- O sistema funcionar no tablet.
+- Os testes críticos forem aprovados.
+- Houver backup e procedimento de recuperação.
+- A segurança e a hospedagem forem aprovadas pela empresa responsável pelos dados.
+
+Não declarar que o sistema está 100% pronto sem testes reais e homologação operacional.
+
+# 35. FORMA DE DESENVOLVIMENTO
+
+Desenvolva em fases, mantendo a aplicação funcional a cada etapa.
+
+**FASE 1 — Fundação**
+- Estrutura do projeto.
+- Identidade visual.
+- Navegação.
+- Banco de dados.
+- Autenticação.
+- Perfis.
+- Cadastro de materiais.
+- Cadastro de silos.
+
+**FASE 2 — Estoque**
+- Livro de movimentações.
+- Recebimentos.
+- Transferências.
+- Capacidade.
+- Histórico.
+- Auditoria.
+
+**FASE 3 — Inteligência documental**
+- Câmera.
+- Leitura de códigos.
+- OCR.
+- Gemini multimodal.
+- Importação de PDF.
+- Ficha RQ-REC-042.
+- Conferência de documentos.
+
+**FASE 4 — Produção**
+- Programação.
+- Importação de relatórios.
+- Consumo.
+- Comparação de versões.
+- Projeção de estoque.
+
+**FASE 5 — Inteligência operacional**
+- Rubricagem.
+- Alertas.
+- Recomendações de transferência.
+- Assistente NEXO.
+- Antecipação de necessidades.
+
+**FASE 6 — Gestão**
+- Relatórios.
+- Passagem de turno.
+- Guia interativo.
+- Administração.
+- Indicadores.
+
+**FASE 7 — Homologação**
+- Testes completos.
+- Teste em tablet.
+- Segurança.
+- Backup.
+- Treinamento.
+- Aprovação operacional.
+
+# 36. REGRAS ABSOLUTAS PARA O DESENVOLVIMENTO
+
+1. Não criar apenas telas bonitas. Criar funcionalidades reais.
+2. Não usar dados fictícios como dados reais.
+3. Não inventar códigos, lotes, pesos, capacidades ou compatibilidades.
+4. Não alterar o mapa original dos silos.
+5. Não ordenar a rubricagem numericamente.
+6. Não permitir movimentação sem validação.
+7. Não deixar a IA alterar estoque por conta própria.
+8. Não misturar consumo previsto com realizado.
+9. Não considerar recebimento pendente como estoque disponível.
+10. Não perder histórico.
+11. Não expor credenciais.
+12. Não implementar integração com Sensor Sistemas sem autorização e documentação.
+13. Não substituir a ficha física oficial sem aprovação.
+14. Não interromper funcionalidades anteriores ao implementar novos módulos.
+15. Não afirmar que uma função está pronta sem testar.
+
+Se encontrar informação operacional contraditória, criar uma pendência de validação em vez de escolher uma versão arbitrariamente.
+
+# 37. PRIMEIRA EXECUÇÃO NO GOOGLE AI STUDIO
+
+Comece agora.
+
+Antes de escrever todo o código, faça uma análise técnica e apresente:
+
+1. Arquitetura proposta.
+2. Estrutura de pastas.
+3. Modelo inicial do banco de dados.
+4. Módulos e dependências.
+5. Estratégia de autenticação.
+6. Estratégia de armazenamento.
+7. Integração com Gemini.
+8. Estratégia de segurança.
+9. Plano de testes.
+
+Depois, implemente a FASE 1 de verdade.
+
+Não pare em uma descrição ou plano. Gere os arquivos, configure a aplicação, construa a interface, conecte o backend e implemente o banco de dados.
+
+Ao finalizar cada fase:
+
+- Execute testes.
+- Corrija erros.
+- Verifique a aplicação.
+- Informe o que foi implementado.
+- Informe o que ainda não foi implementado.
+- Liste configurações externas necessárias.
+- Preserve o código já aprovado.
+
+Se alguma integração exigir credenciais, solicite que sejam configuradas por meio de secrets ou painel seguro. Nunca peça ao usuário que publique senhas ou chaves no chat.
+
+**RESULTADO ESPERADO**
+
+Um sistema NEXO LOG 2.0 funcional, seguro, responsivo e preparado para operação logística real, com controle de matérias-primas, recebimentos, estoque, silos, transferências, consumo, programação e inteligência operacional.
+
+O objetivo é transformar os dados da operação em informação confiável, antecipar necessidades e dar mais controle à equipe da Moega.
+
+**NEXO LOG 2.0 — GESTÃO INTELIGENTE DA MOEGA.**

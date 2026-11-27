@@ -1,0 +1,25 @@
+NEXO LOG 2.0 — PACOTE DE IMAGENS PARA GOOGLE AI STUDIO
+
+Este pacote reúne as imagens de referência disponíveis no ambiente desta conversa.
+
+COMO USAR
+1. Descompacte o ZIP.
+2. Anexe as imagens relevantes ao projeto/prompt no Google AI Studio, em lotes se necessário.
+3. Consulte INDICE_DAS_IMAGENS.csv para localizar cada arquivo.
+4. Informe que imagens de interface são referências visuais e documentos operacionais são fontes de extração sujeitas a conferência humana.
+
+PASTAS
+01_IDENTIDADE_E_LOGO: marca, cores e capa.
+02_MAPA_DE_SILOS: croquis e mapa visual. Preservar disposição; não inventar posições ou compatibilidades.
+03_PALM_ZEBRA_E_LEITURA_DE_ETIQUETAS: telas do Zebra e exemplos de leitura de lote/recebimento.
+04_DOCUMENTOS_E_FORMULARIOS_OPERACIONAIS: fichas, documentos, tabelas e anotações.
+05_SENSOR_SISTEMAS_E_PRODUCAO: telas do Sensor Sistemas. São referências de importação, não autorização de integração.
+06_REFERENCIAS_VISUAIS_DA_INTERFACE: referências de layout e apresentações. Não usar como dados reais.
+
+CUIDADOS
+- Não assumir que OCR/IA leu corretamente lote, código, peso, data ou silo. Exigir conferência humana antes de gravar dados críticos.
+- Não inventar valores ilegíveis; marcar como não identificado/pendente de validação.
+- Não enviar documentos internos a serviços externos sem autorização da empresa.
+- Não presumir API ou acesso ao Sensor Sistemas.
+- Validar mapa e regras de transferência com documentação oficial antes de habilitar operações.
+- Este pacote contém os arquivos de imagem disponíveis no ambiente desta conversa; não garante recuperar anexos de conversas distintas ou arquivos não mais acessíveis.

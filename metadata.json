@@ -1,0 +1,6 @@
+{
+  "name": "NEXO LOG 2.0",
+  "description": "Gestão Inteligente da Moega — Plataforma operacional para controle de matérias-primas, silos, recebimentos, transferências e abastecimento.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
